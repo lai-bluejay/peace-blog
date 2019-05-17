@@ -1,0 +1,43 @@
+---
+title: 我的开源
+date: '2019-04-21 22:39:39'
+updated: '2019-04-21 22:39:39'
+tags: [开源, GitHub]
+---
+
+<!-- 该页面会被定时任务自动覆盖，所以请勿手工更新 -->
+<!-- 如果你有更漂亮的排版方式，请发 issue 告诉我们 -->
+
+{% githubCard user:Gisonrg repo:hexo-github-card %}
+
+{% githubCard user:lai-bluejay repo:diego %}
+
+
+### 1. [diego](https://github.com/lai-bluejay/diego) <kbd title="主要编程语言">Python</kbd> <span style="font-size: 12px;">[🤩`1`](https://github.com/lai-bluejay/diego/watchers "关注数")&nbsp;&nbsp;[⭐️`5`](https://github.com/lai-bluejay/diego/stargazers "收藏数")&nbsp;&nbsp;[🖖`0`](https://github.com/lai-bluejay/diego/network/members "分叉数")</span>
+
+Diego: Data in, IntElliGence Out. A fast framework that supports the rapid construction of automated learning tasks. Simply create an automated learning study (Study) and generate correlated trials (Trial). Then run the code and get a machine learning model. Implemented using Scikit-learn API glossary, using Bayesian optimization and genetic algorithms for automated machine learning. Inspired by [Fast.ai](https://github.com/fastai/fastai).
+
+
+
+---
+
+### 2. [vipeo-starlette](https://github.com/lai-bluejay/vipeo-starlette) <kbd title="主要编程语言">CSS</kbd> <span style="font-size: 12px;">[🤩`3`](https://github.com/lai-bluejay/vipeo-starlette/watchers "关注数")&nbsp;&nbsp;[⭐️`2`](https://github.com/lai-bluejay/vipeo-starlette/stargazers "收藏数")&nbsp;&nbsp;[🖖`1`](https://github.com/lai-bluejay/vipeo-starlette/network/members "分叉数")</span>
+
+view vip video , asgi by starlette
+
+
+
+---
+
+### 3. [wangshoushan](https://github.com/lai-bluejay/wangshoushan) <kbd title="主要编程语言"></kbd> <span style="font-size: 12px;">[🤩`1`](https://github.com/lai-bluejay/wangshoushan/watchers "关注数")&nbsp;&nbsp;[⭐️`1`](https://github.com/lai-bluejay/wangshoushan/stargazers "收藏数")&nbsp;&nbsp;[🖖`0`](https://github.com/lai-bluejay/wangshoushan/network/members "分叉数")&nbsp;&nbsp;[🏠`https://lai-bluejay.gitbook.io/wangshoushan/`](https://lai-bluejay.gitbook.io/wangshoushan/ "项目主页")</span>
+
+
+
+
+
+---
+
+### 4. [R360RiskDemo](https://github.com/lai-bluejay/R360RiskDemo) <kbd title="主要编程语言">Python</kbd> <span style="font-size: 12px;">[🤩`0`](https://github.com/lai-bluejay/R360RiskDemo/watchers "关注数")&nbsp;&nbsp;[⭐️`1`](https://github.com/lai-bluejay/R360RiskDemo/stargazers "收藏数")&nbsp;&nbsp;[🖖`1`](https://github.com/lai-bluejay/R360RiskDemo/network/members "分叉数")</span>
+
+融360大数据竞赛的demo
+
