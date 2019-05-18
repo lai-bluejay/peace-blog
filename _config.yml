@@ -128,7 +128,7 @@ sitemap:
     category: false
 
 filter_optimize:
-  enable: true
+  enable: false
   # remove static resource query string
   #   - like `?v=1.0.0`
   remove_query_string: true
