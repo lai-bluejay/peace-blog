@@ -37,6 +37,7 @@
     "stylint": "^1.5.9"
   },
   "dependencies": {
-    "hexo-renderer-kramed": "^0.1.4"
+    "hexo-renderer-kramed": "^0.1.4",
+    "minimatch": "^3.0.4"
   }
 }
