@@ -8,7 +8,7 @@ tags:
   - lrzsz
   - 安利墙
 categories:
-  - '201903'
+  - 生产效率
 abbrlink: 215bdd05
 ---
 # 为iTerm配置Zmodem文件传输(支持跳板机)

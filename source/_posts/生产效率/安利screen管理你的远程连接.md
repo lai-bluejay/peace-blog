@@ -7,7 +7,7 @@ tags:
   - screen
   - linux技巧
 categories:
-  - '201903'
+  - 生产效率
 abbrlink: 74937c67
 ---
 # 零. screen 是什么

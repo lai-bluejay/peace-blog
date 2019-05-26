@@ -8,7 +8,7 @@ tags:
   - cuda
   - bazel
 categories:
-  - '201903'
+  - 生产效率
 abbrlink: 5c98b9f2
 ---
 如何在Ubuntu下编译CUDA 10.0 TensorFlow-GPU r.1.13版本

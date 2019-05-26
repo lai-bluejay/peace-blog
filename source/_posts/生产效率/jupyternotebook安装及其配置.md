@@ -6,7 +6,7 @@ tags:
   - jupyter
   - anaconda
 categories:
-  - '201905'
+  - 生产效率
 abbrlink: 300c3a74
 ---
 ### 预备

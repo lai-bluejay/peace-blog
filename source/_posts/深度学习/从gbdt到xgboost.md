@@ -8,7 +8,7 @@ tags:
   - 机器学习
 mathjax: true
 categories:
-  - '201903'
+  - 深度学习
 abbrlink: 45d4de14
 ---
 

@@ -7,7 +7,7 @@ tags:
   - 深度学习
   - 课程笔记
 categories:
-  - '201903'
+  - 深度学习
 abbrlink: c8c4f3aa
 ---
 fast.ai course-v3 笔记

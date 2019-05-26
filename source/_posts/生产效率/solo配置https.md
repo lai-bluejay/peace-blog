@@ -8,7 +8,7 @@ tags:
   - Solo
   - https
 categories:
-  - '201903'
+  - 生产效率
 abbrlink: c0f4073
 ---
 # solo的运行模式

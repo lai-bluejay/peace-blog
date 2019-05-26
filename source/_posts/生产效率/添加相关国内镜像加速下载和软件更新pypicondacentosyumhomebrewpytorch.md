@@ -8,7 +8,7 @@ tags:
   - 镜像地址
   - 安利墙
 categories:
-  - '201903'
+  - 生产效率
 abbrlink: dd65a875
 ---
 # 镜像参考地址

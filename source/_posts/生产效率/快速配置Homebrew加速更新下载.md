@@ -8,7 +8,7 @@ tags:
   - 镜像地址
   - 镜像加速
 categories:
-  - '201903'
+  - 生产效率
 abbrlink: 4067f07b
 ---
 快速配置Homebrew加速更新下载

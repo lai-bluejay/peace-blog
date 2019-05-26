@@ -8,7 +8,7 @@ tags:
   - 学习率
   - resnet
 categories:
-  - '201903'
+  - 深度学习
 abbrlink: e1f744e2
 ---
 # fit one cycle

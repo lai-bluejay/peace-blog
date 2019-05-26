@@ -8,7 +8,7 @@ tags:
   - nlp
 mathjax: true
 categories:
-  - '201905'
+  - 深度学习
 abbrlink: 13a5ed49
 ---
 word2vec
