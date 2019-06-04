@@ -10,6 +10,7 @@ tags:
 mathjax: true
 categories:
   - 深度学习
+abbrlink: f7632cc3
 ---
 
 ## brief of GAN GAN的简介
