@@ -131,13 +131,13 @@ GAN可以认为是解决Structured Learning的一种解决方案。传统的解�
 
 过程如下：
 
-S1: 抽样m个样本：$\left\{x^{1}, x^{2}, \ldots, x^{m}\right\}$ ， 计算 $P_G(x^i;\theta)$， 即被G的分布抽样出来的概率。
+S1: 抽样m个样本：$\left\{x^1, x^2, \ldots, x^m\right\}$ ， 计算 $P_G(x^i;\theta)$， 即被G的分布抽样出来的概率。
 
-S2: 最大似然：$L=\prod_{i=1}^{m} P_{G}\left(x^{i} ; \theta\right)$，即最小似然的负对数。或者最小化KL散度（KL Divergence）（生成模型预设的分布与实际分布的KL散度）
+S2: 最大似然：$L=\prod\_{i=1}^m P\_G\left(x^i ; \theta\right)$，即最小似然的负对数。或者最小化KL散度（KL Divergence）（生成模型预设的分布与实际分布的KL散度）
 
 S3：更新$\theta$.
 
-$E_{x \sim P_{\text {data}}}$指从Pdata中抽样x。
+$E\_{x \sim P\_{\text {data}}}$指从Pdata中抽样x。
 
 
 $$
@@ -167,7 +167,7 @@ $$
 
 1. 正态分布抽样（或者其他抽样）生成z
 2. 使用NN的生成器G，得到$x = G(z)$  ，通过神经网络，就得到了复杂的分布$P_G$。
-3. 目标：最小化$P_G$ 和实际分布的差异$G^{*}=\arg \min _{G} D i v\left(P_{G}, P_{\text {data}}\right)$
+3. 目标：最小化$P\_G$ 和实际分布的差异$G^*=\arg \min\_G Div\left(P\_G, P\_{\text {data}}\right)$
 
 如果我们希望$P_G$完全的支持$x$空间，那么我们需要z的维数至少要和x一样大, 并且G是可微的， 以上为设计所需要的所有的条件。
 
@@ -183,7 +183,7 @@ $$
 $$
 G^{*}=\arg \min _{G} \max _{D} V(G, D)
 $$
-数学式的含义就是： 找到一个生成器$G^*$并固定，找到 一个判别器D，最大化data和$G^*$的JS散度（判别器能鉴别真实分布和生成分布）；同时调整G，使得G和data差异（JS散度）的值最小（生成器生成的分布和真实分布的差异最小）。
+数学式的含义就是： 找到一个生成器$G^\*$并固定，找到 一个判别器D，最大化data和$G^\*$的JS散度（判别器能鉴别真实分布和生成分布）；同时调整G，使得G和data差异（JS散度）的值最小（生成器生成的分布和真实分布的差异最小）。
 
 
 
@@ -197,7 +197,8 @@ $$
 $$
 即，在固定G的情况下，使得V最大。我们也发现，实际上，目标函数和交叉熵是一致的，即训练判别器和训练二分类器是一致的。
 
-即，找到x，最大化$P_{d a t a}(x) \log D(x)+P_{G}(x) \log (1-D(x))$。由于G和data都固定，可以认为是常数项，即最大化$\mathrm{f}(D)=\operatorname{alog}(D)+b \log (1-D)$。找极值点，即找微分=0的D。得到
+即，找到x，最大化$P\_{data}(x) \log D(x)+P\_G(x) \log (1-D(x))$。由于G和data都固定，可以认为是常数项，即最大化$\mathrm{f}(D)=a\operatorname{log}(D)+b \log (1-D)$。找极值点，即找微分=0的D。得到
+
 $$
 D^{*}(x)=\frac{P_{d a t a}(x)}{P_{d a t a}(x)+P_{G}(x)}
 $$
@@ -234,7 +235,7 @@ $$
 
 #### 3.3 散度的选择
 
-KL散度不是对称的； 最小化$D_{K L}\left(p_{\text {model}}| | p_{\text {data}}\right)$与最小化$D_{K L}\left(p_{d a t a} \| p_{m o d e l}\right)$是不同的。
+KL散度不是对称的； 最小化$D\_{K L}\left(p\_{\text {model}}| | p\_{\text {data}}\right)$与最小化$D\_{K L}\left(p\_{d a t a} \| p\_{m o d e l}\right)$是不同的。
 
 ![Figure 14](https://sinpycn.github.io/images/201705/03/fig14.jpg)
 
@@ -273,11 +274,10 @@ $$
         $$
         \begin{array}{l}{ \tilde{V}=\frac{1}{m} \sum_{i=1}^{m}  - \log \left(D\left(G\left(z^{i}\right)\right)\right)} \end{array}
         $$
-        
 
     3. 更新权重
         $$
-        \\ { \theta_{g} \leftarrow \theta_{g} -\eta \nabla \tilde{V}\left(\theta_{g}\right)}
+       \theta_{g} \leftarrow \theta_{g} -\eta \nabla \tilde{V}\left(\theta_{g}\right)
         $$
 
     4. 注意：为了避免D和G的变换导致G的可行解范围发生很大变换，在训练过程中，应该让G的更新幅度要小。即更新一次就好。
@@ -289,7 +289,7 @@ $$
 总而言之， GAN被设计为可以避免很多的其他生成模型的缺点：
 
 - 它可以并行产生样本， 而不是使用运行时间与xx的维数成比例的方法。 这一点比FVBN有优势。
-- 生成函数设计有很少的限制。 这一点是针对玻尔兹曼机的优势， 只有少数的概率分布能够被马尔可夫链来处理， 并且相比非线性ICA， 生成器必须是可逆的，并且隐变量编码zz必须与样本xx同维。
+- 生成函数设计有很少的限制。 这一点是针对玻尔兹曼机的优势， 只有少数的概率分布能够被马尔可夫链来处理， 并且相比非线性ICA， 生成器必须是可逆的，并且隐变量编码z必须与样本x同维。
 - 不需要马尔可夫链。 这一点比玻尔兹曼机和生成随机网络有优势。
 - 不需要变分边界， 并且那些被用于GAN的模型是全局优化器， 所以GAN是渐近一致的（asymptotically consistent）。 一些VAE也可能是渐近一致，但是还没有被证明。
 - GAN通常被认为比其他方法可以产生更好的样本。
