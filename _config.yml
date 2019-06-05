@@ -98,8 +98,9 @@ symbols_count_time:
 
 algolia:
   applicationID: 'MB7XCXTVKL'
-  apiKey: bd7706d16f6c64abc6c001d60c984697
-  indexName: 'pe3_blog'
+  apiKey: 'bd7706d16f6c64abc6c001d60c984697'
+  adminApiKey: '5dd8b6d56893946249956702dee6f75c'
+  indexName: 'prod_peace-eve'
   chunkSize: 5000
 
 leancloud_counter_security:
@@ -126,6 +127,9 @@ sitemap:
     path: sitemap.xml
     tag: false
     category: false
+
+baidusitemap: 
+  path: baidusitemap.xml
 
 filter_optimize:
   enable: false
