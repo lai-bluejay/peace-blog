@@ -10,7 +10,7 @@ import os
 
 root = os.path.dirname(os.path.abspath(__file__))
 input_dir = root + '/_posts/深度学习'
-output_dir = root + '../zhihu_posts/'
+output_dir = root + '/../zhihu_posts/'
 import re
 def repl(m):
     inner_word = m.group(1)
@@ -40,34 +40,44 @@ for file in os.listdir(input_dir):
         new_text = []
         while k < len(text):
             item = text[k]
-            if item.startswith('#'):
+            
+            if item.strip() == "":
+                k += 1
+                continue
+
+            elif item.startswith('#'):
                 item = trans_head(item)
                 new_text.append(item+'<br>')
                 k += 1
 
             elif item.startswith('$$'):
-                new_text.append('<br>')
+                # new_text.append('<br>')
                 if flag == 0:
                     flag = 1
-
                     k = k + 1
                 elif flag == 1 and match is False:
                     match = True
+                    new_text.append('<br>$' + " ".join(tmp_formula) + '$<br>')
+                    tmp_formula = []
+                    flag = 0
+                    match = False
                     k += 1
+                else:
+                    print(k)
+                    print(text[k+1])
+                    print(text[k-1])
+                    print(item)
+                    print(flag)
+                    print(match)
+                    break
             else:
                 if flag == 1:
-                    if match:
-                        new_text.append('<br>$' + " ".join(tmp_formula) + '$<br>')
-                        tmp_formula = []
-                        flag = 0
-                        match = False
-                        k += 1
-                    else:
-                        tmp_formula.append(item.strip())
-                        k += 1
+                
+                    tmp_formula.append(item.strip())
+                    k += 1
                 else:
                     new_text.append(item+'<br>')
                     k += 1
         
-        with open(output_dir + '/' + file, 'w') as f_write:
-            f_write.writelines(new_text)
+    with open(output_dir + '/' + file, 'w') as f_write:
+        f_write.writelines(new_text)
