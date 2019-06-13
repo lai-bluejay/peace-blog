@@ -10,6 +10,7 @@ tags:
 mathjax: true
 categories:
   - 深度学习
+abbrlink: f66c7f7c
 ---
 
 # 经典GAN的一般框架

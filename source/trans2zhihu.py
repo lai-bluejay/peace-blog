@@ -10,7 +10,7 @@ import os
 
 root = os.path.dirname(os.path.abspath(__file__))
 input_dir = root + '/_posts/深度学习'
-output_dir = root + '/zhihu_posts/'
+output_dir = root + '../zhihu_posts/'
 import re
 def repl(m):
     inner_word = m.group(1)
