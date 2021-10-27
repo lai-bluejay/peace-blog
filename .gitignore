@@ -1,4 +1,5 @@
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
 db.json
 *.log
@@ -6,3 +7,19 @@ node_modules/
 public/
 .deploy*/
 .vscode/
+=======
+.idea/
+*.log
+*.iml
+yarn.lock
+package-lock.json
+node_modules/
+
+# Ignore optional external libraries
+source/lib/*
+
+# Track internal libraries & Ignore unused verdors files
+!source/lib/font-awesome/
+!source/lib/anime.min.js
+!source/lib/velocity/
+>>>>>>> b062274e94d232ce05dded1a4965ceb63cf60d70
